@@ -245,7 +245,7 @@
       "description": "Get set to dazzle throughout the party season in this shimmering sequin dress",
       "category": "\"women's clothing\"",
       "image": "https://matalan-content.imgix.net/uploads/asset_file/asset_file/363870/1635416615.0648904-S2867794_C423_Alt1.jpg?ixlib=rails-2.1.4&cs=tinysrgb&auto=compress%2Cformat&fm=pjpg&w=1000&h=1400&fit=crop&s=3d39f8940a8a466c0ced096b93907031",
-      "price": "60",
+      "price": "70",
       "id": 21
     }
   ],
@@ -284,6 +284,23 @@
         "lastname": "golpour"
       },
       "phone": "0912-6280630"
+    },
+    {
+      "address": {
+        "city": "rasht",
+        "street": "jomhori",
+        "number": 22,
+        "zipcode": "12926-3874"
+      },
+      "id": 2,
+      "email": "amir@gmail.com",
+      "username": "amirgolpour",
+      "password": "QAZxsw2",
+      "name": {
+        "firstname": "amir",
+        "lastname": "golpour"
+      },
+      "phone": "0912-4522036"
     }
   ]
 }

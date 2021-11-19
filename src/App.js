@@ -9,11 +9,13 @@ import ProductDB from './components/pages/admin/product/ProductDB';
 import CategoryState from './components/contexts/categoryContext/CategoryState';
 import CategoryDB from './components/pages/admin/catrgory/CategoryDB';
 import CreateCategory from './components/pages/admin/catrgory/CreateCategory';
-
+import UserDB from './components/pages/admin/users/UserDB';
+import UserState from './components/contexts/userContext/UserState';
 function App() {
   return (
 <>
 <Router>
+  <UserState>
   <CategoryState>
   <ProductState>
 <Header/>
@@ -34,9 +36,12 @@ function App() {
     </Route>
     <Route path="/edit-category/:id" element={<CreateCategory title="Update Category" isEdit/>}>
     </Route>
+    <Route path="/admin/user" element={<UserDB/>}>
+    </Route>
   </Routes>
   </ProductState>
   </CategoryState>
+  </UserState>
 </Router>
 </>
   );
