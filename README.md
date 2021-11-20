@@ -1,3 +1,5 @@
+### `npm run go`
+ run the both json-server and react App
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
