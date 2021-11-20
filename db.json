@@ -269,38 +269,34 @@
   ],
   "users": [
     {
-      "address": {
-        "city": "tehran",
-        "street": "jomhori",
-        "number": 63,
-        "zipcode": "12926-3874"
-      },
       "id": 1,
-      "email": "john@gmail.com",
-      "username": "argolpour",
-      "password": "9125400138",
-      "name": {
-        "firstname": "alireza",
-        "lastname": "golpour"
-      },
-      "phone": "0912-6280630"
+      "email": "argolpour@gmail.com",
+      "firstname": "alireza",
+      "lastname": "golpour"
     },
     {
-      "address": {
-        "city": "rasht",
-        "street": "jomhori",
-        "number": 22,
-        "zipcode": "12926-3874"
-      },
       "id": 2,
-      "email": "amir@gmail.com",
-      "username": "amirgolpour",
-      "password": "QAZxsw2",
-      "name": {
-        "firstname": "amir",
-        "lastname": "golpour"
-      },
-      "phone": "0912-4522036"
+      "email": "said@gmail.com",
+      "firstname": "saied",
+      "lastname": "kermani"
+    },
+    {
+      "firstname": "ahmad",
+      "lastname": "sajadi",
+      "email": "argolpour@gmail.com",
+      "id": 3
+    },
+    {
+      "firstname": "ahmad",
+      "lastname": "mohammadi",
+      "email": "ahmad@gmail.com",
+      "id": 4
+    },
+    {
+      "firstname": "afshin",
+      "lastname": "ahmadi",
+      "email": "afshin@gmail.com",
+      "id": 7
     }
   ]
 }

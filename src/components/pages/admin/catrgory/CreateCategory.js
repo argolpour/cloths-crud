@@ -12,14 +12,14 @@ const CreateCategory = ({title,isEdit}) => {
     const onChangeValue=(e)=>{
         setValue({...value,[e.target.name]:e.target.value}) 
     }
-    const onSubmitHandler=(e)=>{
+    const onSubmitHandler=async(e)=>{
         e.preventDefault();
         if(value.name!==""){   
             if (isEdit) {
-                updateCategory(value,id)                        
+                await updateCategory(value,id)                        
                 
             } else {
-                createCategory(value)                     
+               await createCategory(value)                     
             }   
             getCategories()    
             navigate("/admin/category")    

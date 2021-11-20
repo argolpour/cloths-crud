@@ -20,14 +20,14 @@ export const CreateProduct = ({title ,isEdit}) => {
     const onChangeHandler=(e)=>{
         setValues({...values,[e.target.name]:e.target.value}) 
     }
-    const onSubmitHandler=(e)=>{
+    const onSubmitHandler=async(e)=>{
         e.preventDefault();
         if (values.title && values.description&& values.image && values.title && values.category) {
           if (isEdit){
-             Updateproduct(values,id)          
+            await Updateproduct(values,id)          
           }
           else {
-             createproduct(values);            
+            await createproduct(values);            
           }          
             getProducts()
             navigate("/admin/product");        
@@ -67,14 +67,9 @@ export const CreateProduct = ({title ,isEdit}) => {
     <input type="text" className="form-control" id="description" aria-describedby="emailHelp" placeholder="Product Description"  name="description" value={values.description} onChange={onChangeHandler}/>
  
   </div>
-  {/* <div className="form-group">
-    <label htmlFor="category">Category</label>
-    <input type="text" className="form-control" id="category" aria-describedby="emailHelp" placeholder="Product Category"  name="category" value={values.category} onChange={onChangeHandler}/>
- 
-  </div> */}
-  <label className="mr-sm-2" htmlFor="category">Category</label>
+    <label className="mr-sm-2" htmlFor="category">Category</label>
   <select className="custom-select" id="category"  value={values.category} onChange={onChangeHandler} name="category">
-  <option defaultValue >select the category</option>
+  <option defaultValue value="" disabled >select the category</option>
    {categories?.map(category=> <option value={category.name} key={category.id} >{category.name}</option>)}
 </select>
   <div className="form-group">
