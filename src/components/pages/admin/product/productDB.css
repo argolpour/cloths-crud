@@ -1,7 +1,7 @@
 
 .product-wrapper {
     width: 1000px;
-    max-height: 600px;
+    min-height: 550px;
     padding: 15px;
     margin: 10px auto;
    box-shadow: 0 0 10px 3px gray;
