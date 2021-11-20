@@ -16,7 +16,7 @@ const ProductState = ({children}) => {
     //.........GET All Products
     const getProducts=async (current)=>{
         try {
-            const response=await fetch(`http://localhost:5000/products?_page=${current}&_limit=10`)
+            const response=await fetch(`http://localhost:5000/products?_page=${current}&_limit=8`)
             const data=await response.json();
            const Count=response.headers.get('x-total-count');
             dispatch({type:Get_PRODUCT,payload:data,totalCount:Count})

@@ -23,7 +23,7 @@ const Products = () => {
         previousLabel={"<<"}
         nextLabel={">>"}
         breakLabel={"..."}
-        pageCount={Math.ceil(count/10) }
+        pageCount={Math.ceil(count/8) }
         marginPagesDisplayed={2}
         pageRangeDisplayed={3}
         onPageChange={handlePageClick}
