@@ -11,7 +11,6 @@ const Products = () => {
     const handlePageClick=(data)=> {
       let currentPage=data.selected+1;
      getProducts(currentPage)
-     console.log(count);
     }
     return (
         <>
