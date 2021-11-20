@@ -7,21 +7,24 @@ import productReducer from './productreducer';
 const ProductState = ({children}) => {
     const initialState={
         products:[],
+        count:0,
         loading:false
     }
    
     const [state, dispatch] = useReducer(productReducer, initialState )
 
     //.........GET All Products
-    const getProducts=async ()=>{
+    const getProducts=async (current)=>{
         try {
-            const response=await fetch("http://localhost:5000/products")
+            const response=await fetch(`http://localhost:5000/products?_page=${current}&_limit=10`)
             const data=await response.json();
-          
-            dispatch({type:Get_PRODUCT,payload:data})
+           const Count=response.headers.get('x-total-count');
+            dispatch({type:Get_PRODUCT,payload:data,totalCount:Count})
+            return Count;
         } catch (error) {
             console.log(error);
         }
+       
     }
      //.........Create New Product...........
      const createproduct=async(valuse)=>{
