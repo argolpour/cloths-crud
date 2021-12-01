@@ -9,10 +9,10 @@ const Invoice = () => {
     const {id}=useParams()
     const search=useLocation().search
     const productid=new URLSearchParams(search).get('productid')
-    console.log(productid);
     useEffect(() => {
        getCustomer(id)
        getProduct(productid)
+        // eslint-disable-next-line
     }, [])
   
     return (

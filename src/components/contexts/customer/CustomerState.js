@@ -18,7 +18,6 @@ const CustomerState = ({children}) => {
     const getCustomer=async(id)=>{
         const response=await fetch(`http://localhost:5000/customers/${id}`)
         const data=await response.json();
-        console.log(data);
         dispatch({type:GET_CUSTOMER,payload:data})
     }
         //.........create Customer..........

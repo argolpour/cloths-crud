@@ -8,7 +8,6 @@ const Login = () => {
     const navigate=useNavigate()
     const search=useLocation().search;
     const productId=new URLSearchParams(search).get('productid')
-    console.log(productId);
 
     const [userName, setUserName] = useState()
     const [password, setPassword] = useState()
@@ -35,7 +34,7 @@ const Login = () => {
     }
     return (
         <div className={classes.wrapper} >
-            <img src={loginImage} alt="login-image"/>
+            <img src={loginImage} alt="login"/>
             <div className={classes.loginWrapper}>
                 <h2>Log In</h2>
                 {error && <li className={classes.error}>{error}</li>}

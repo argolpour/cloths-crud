@@ -16,7 +16,6 @@ export const styles=createUseStyles({
             left:'50%',
             transform:'translate(-50% , -50%)',
             padding:'70px 30px',
-            background: 'rgb(34,193,195)',
             background:'  linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(241,178,44,1) 100%)' ,
             borderRadius:10,
             '& label':{
