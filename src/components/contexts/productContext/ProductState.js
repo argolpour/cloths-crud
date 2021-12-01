@@ -35,10 +35,10 @@ const ProductState = ({children}) => {
         dispatch({type:GET_SINGLE_PRODUCT,payload:data})
     }
      //.........grt product By category.......
-     const getProductbyCategory=async(category)=>{
+     const getProductbyCategory=async(category,id)=>{
         const response=await fetch(`http://localhost:5000/products`) 
         const data=await response.json();
-        const result=await data.filter(item=>item.category===category)
+        const result=await data.filter(item=>item.category===category && item.id!==+id)
         const recommendedProduct=result.slice(0,4);
          dispatch({type:GET_RECOMMENDED_PRODUCT,payload:recommendedProduct})
     }

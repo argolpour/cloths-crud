@@ -273,40 +273,66 @@
       "email": "argolpour@gmail.com",
       "firstname": "alireza",
       "lastname": "golpour",
-      "username":"argolpour",
-      "pasword":"9125400138"
-    },
+      "username": "admin",
+      "pasword": "admin123"
+    }
+  ],
+  "customers": [
     {
-      "id": 2,
+      "id": 1,
       "email": "said@gmail.com",
       "firstname": "saied",
       "lastname": "kermani",
-      "username":"sajadkarimi",
-      "pasword":"123456"
+      "tel": "09125400138",
+      "address": {
+        "city": "tehran",
+        "town": "baharestan",
+        "address": "baharestan street first alley nimber 48"
+      },
+      "username": "sajadkarimi",
+      "pasword": "123456"
     },
     {
       "firstname": "ahmad",
       "lastname": "sajadi",
       "email": "argolpour@gmail.com",
-      "id": 3,
-      "username":"ahmadsj",
-      "pasword":"ahmad654321"
+      "id": 2,
+      "tel": "09125400138",
+      "address": {
+        "city": "tehran",
+        "town": "baharestan",
+        "address": "baharestan street first alley nimber 48"
+      },
+      "username": "ahmadsj",
+      "pasword": "ahmad654321"
     },
     {
       "firstname": "ahmad",
       "lastname": "mohammadi",
       "email": "ahmad@gmail.com",
-      "id": 4,
-      "username":"milad2021",
-      "pasword":"milad123456"
+      "id": 3,
+      "tel": "09125400138",
+      "address": {
+        "city": "tehran",
+        "town": "baharestan",
+        "address": "baharestan street first alley nimber 48"
+      },
+      "username": "milad2021",
+      "pasword": "milad123456"
     },
     {
       "firstname": "afshin",
       "lastname": "ahmadi",
       "email": "afshin@gmail.com",
-      "id": 7,
-      "username":"afshinahmadi",
-      "pasword":"qazxsw"
+      "id": 4,
+      "tel": "09125400138",
+      "address": {
+        "city": "tehran",
+        "town": "baharestan",
+        "address": "baharestan street first alley nimber 48"
+      },
+      "username": "afshinahmadi",
+      "pasword": "qazxsw"
     }
   ]
 }

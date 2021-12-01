@@ -13,6 +13,7 @@ import UserDB from './components/pages/admin/users/UserDB';
 import UserState from './components/contexts/userContext/UserState';
 import CreateUser from './components/pages/admin/users/CreateUser';
 import ProductInfo from './components/pages/productinfo/ProductInfo';
+import Login from './components/pages/login/Login';
 function App() {
   return (
 <>
@@ -43,8 +44,9 @@ function App() {
     <Route path="/create-user" element={<CreateUser title="Create User"/>}></Route>
     <Route path="/edit-user/:id" element={<CreateUser title="Update User" isEdit/>}>
     </Route>
-    <Route path="/product/:id" element={<ProductInfo/>}>
+    <Route path="/product/:id" element={<ProductInfo/>}> 
     </Route>
+    <Route path="/login" element={<Login/>}></Route>
   </Routes>
   </ProductState>
   </CategoryState>

@@ -2,25 +2,29 @@ import {createUseStyles} from 'react-jss'
 export const styles=createUseStyles({
     container:{
         width:1200,
-        margin:'50px auto',
+        margin:'20px auto',
         display:'block'
     },
     productWrapper:{
         width:'100%',
         display:'flex',
+        justifyContent:'space-around',
         boxShadow:'0 0 7px 2px gray'
         
     },
     productImage:{
-        width:'100%',
+        width:'30%',
+        justifyContent:'center',
+        alignItems:'center',
         '& img':{
-            width:400,
-            height:500,
+           
+            width:250,
+            height:300,
             padding:10
         }
     },
     productInfo:{
-        width:'100%',
+        width:'70%',
         padding:10
     },
     recommendedWrapper:{
