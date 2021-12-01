@@ -12,6 +12,7 @@ import CreateCategory from './components/pages/admin/catrgory/CreateCategory';
 import UserDB from './components/pages/admin/users/UserDB';
 import UserState from './components/contexts/userContext/UserState';
 import CreateUser from './components/pages/admin/users/CreateUser';
+import ProductInfo from './components/pages/productinfo/ProductInfo';
 function App() {
   return (
 <>
@@ -41,6 +42,8 @@ function App() {
     </Route>
     <Route path="/create-user" element={<CreateUser title="Create User"/>}></Route>
     <Route path="/edit-user/:id" element={<CreateUser title="Update User" isEdit/>}>
+    </Route>
+    <Route path="/product/:id" element={<ProductInfo/>}>
     </Route>
   </Routes>
   </ProductState>

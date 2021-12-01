@@ -1,12 +1,14 @@
 
 import ProductContext from './productContext';
-import { Get_PRODUCT,DELETE_PRODUCT } from '../Types';
+import { Get_PRODUCT,DELETE_PRODUCT,GET_SINGLE_PRODUCT,GET_RECOMMENDED_PRODUCT } from '../Types';
 import { useReducer } from 'react';
 import productReducer from './productreducer';
 
 const ProductState = ({children}) => {
     const initialState={
         products:[],
+        product:{},
+        recommendedProduct:[],
         count:0,
         loading:false
     }
@@ -25,6 +27,20 @@ const ProductState = ({children}) => {
             console.log(error);
         }
        
+    }
+    //.........grt product By ID.......
+    const getProduct=async(id)=>{
+        const response=await fetch(`http://localhost:5000/products/${id}`) 
+        const data=await response.json();
+        dispatch({type:GET_SINGLE_PRODUCT,payload:data})
+    }
+     //.........grt product By category.......
+     const getProductbyCategory=async(category)=>{
+        const response=await fetch(`http://localhost:5000/products`) 
+        const data=await response.json();
+        const result=await data.filter(item=>item.category===category)
+        const recommendedProduct=result.slice(0,4);
+         dispatch({type:GET_RECOMMENDED_PRODUCT,payload:recommendedProduct})
     }
      //.........Create New Product...........
      const createproduct=async(valuse)=>{
@@ -57,7 +73,7 @@ const ProductState = ({children}) => {
          return response;
     }
     return (
-        <ProductContext.Provider value={{...state,getProducts,createproduct,deleteProduct,Updateproduct}}>
+        <ProductContext.Provider value={{...state,getProducts,createproduct,deleteProduct,Updateproduct,getProduct,getProductbyCategory}}>
             {children}
         </ProductContext.Provider>
     )
