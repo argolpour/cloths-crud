@@ -4,7 +4,7 @@ const Header = () => {
     return (
         <header className="header">
             <div className="login">
-                <button className="btn btn-primary">Login</button>
+                {/* <button className="btn btn-primary">Login</button> */}
             </div>
             <nav className="nav">
                 <ul>

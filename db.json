@@ -275,6 +275,14 @@
       "lastname": "golpour",
       "username": "admin",
       "pasword": "admin123"
+    },
+    {
+      "id": 2,
+      "email": "ahmad@gmail.com",
+      "firstname": "ahmad",
+      "lastname": "bodaghi",
+      "username": "ahmad",
+      "pasword": "ahmad123"
     }
   ],
   "customers": [
@@ -289,8 +297,8 @@
         "town": "baharestan",
         "address": "baharestan street first alley nimber 48"
       },
-      "username": "sajadkarimi",
-      "pasword": "123456"
+      "username": "ss",
+      "password": "123"
     },
     {
       "firstname": "ahmad",
@@ -304,7 +312,7 @@
         "address": "baharestan street first alley nimber 48"
       },
       "username": "ahmadsj",
-      "pasword": "ahmad654321"
+      "password": "ahmad654321"
     },
     {
       "firstname": "ahmad",
@@ -318,7 +326,7 @@
         "address": "baharestan street first alley nimber 48"
       },
       "username": "milad2021",
-      "pasword": "milad123456"
+      "password": "milad123456"
     },
     {
       "firstname": "afshin",
@@ -332,7 +340,7 @@
         "address": "baharestan street first alley nimber 48"
       },
       "username": "afshinahmadi",
-      "pasword": "qazxsw"
+      "password": "qazxsw"
     }
   ]
 }

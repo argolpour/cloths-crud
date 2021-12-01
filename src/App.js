@@ -14,10 +14,13 @@ import UserState from './components/contexts/userContext/UserState';
 import CreateUser from './components/pages/admin/users/CreateUser';
 import ProductInfo from './components/pages/productinfo/ProductInfo';
 import Login from './components/pages/login/Login';
+import CustomerState from './components/contexts/customer/CustomerState';
+import Invoice from './components/pages/invoice/Invoice';
 function App() {
   return (
 <>
 <Router>
+  <CustomerState>
   <UserState>
   <CategoryState>
   <ProductState>
@@ -47,10 +50,12 @@ function App() {
     <Route path="/product/:id" element={<ProductInfo/>}> 
     </Route>
     <Route path="/login" element={<Login/>}></Route>
+    <Route path="/customer/:id" element={<Invoice/>}></Route>
   </Routes>
   </ProductState>
   </CategoryState>
   </UserState>
+  </CustomerState>
 </Router>
 </>
   );
