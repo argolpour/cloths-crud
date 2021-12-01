@@ -1,16 +1,25 @@
 import CustomerContext from './../../contexts/customer/CutomerContext';
+import productContext from './../../contexts/productContext/productContext';
 import { useContext, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams,useLocation } from 'react-router-dom';
+
 const Invoice = () => {
     const {getCustomer,customer} =useContext(CustomerContext)
+    const {getProduct,product}=useContext(productContext)
     const {id}=useParams()
+    const search=useLocation().search
+    const productid=new URLSearchParams(search).get('productid')
+    console.log(productid);
     useEffect(() => {
        getCustomer(id)
+       getProduct(productid)
     }, [])
-    console.log(customer);
+  
     return (
         <div>
             <h1>{customer.firstname}</h1>
+            <h1>{product.title}</h1>
+
         </div>
     )
 }

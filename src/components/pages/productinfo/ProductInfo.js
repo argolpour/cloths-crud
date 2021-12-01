@@ -30,7 +30,7 @@ const ProductInfo = () => {
              <p>{product.description}</p>
              <h4><strong>{product.price}</strong></h4>
              { <span><i className="fas fa-star"></i>{product?.rating?.rate}</span>}
-             <Link to="/login" className="btn btn-primary btn-block">Buy</Link>
+             <Link to={`/login?productid=${id}`} className="btn btn-primary btn-block">Buy</Link>
              <Link to="/" className="btn btn-success btn-block">Back</Link>
         </div>
         </div>

@@ -2,10 +2,14 @@ import {styles} from './styles'
 import loginImage from '../../../images/loginImage.jpg'
 import { useState, useContext, useEffect } from 'react';
 import CustomerContext from './../../contexts/customer/CutomerContext';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate ,useLocation} from 'react-router-dom';
 const Login = () => {
     const classes=styles()
     const navigate=useNavigate()
+    const search=useLocation().search;
+    const productId=new URLSearchParams(search).get('productid')
+    console.log(productId);
+
     const [userName, setUserName] = useState()
     const [password, setPassword] = useState()
     const [error, setError] = useState("")
@@ -21,7 +25,7 @@ const Login = () => {
         if(userName && password){
             const customer=customers.find(customer=>customer.username===userName && customer.password===password)
             if (customer!==undefined){
-             navigate(`/customer/${customer.id}?name=${customer.firstname}_${customer.lastname}`)
+             navigate(`/customer/${customer.id}?name=${customer.firstname}_${customer.lastname}&productid=${productId}`)
             }else {
               setError("username or password is wrong")
             }

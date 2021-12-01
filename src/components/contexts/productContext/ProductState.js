@@ -30,8 +30,10 @@ const ProductState = ({children}) => {
     }
     //.........grt product By ID.......
     const getProduct=async(id)=>{
+        console.log(id);
         const response=await fetch(`http://localhost:5000/products/${id}`) 
         const data=await response.json();
+        console.log(data);
         dispatch({type:GET_SINGLE_PRODUCT,payload:data})
     }
      //.........grt product By category.......

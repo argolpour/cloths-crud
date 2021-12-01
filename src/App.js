@@ -20,10 +20,11 @@ function App() {
   return (
 <>
 <Router>
-  <CustomerState>
+
   <UserState>
   <CategoryState>
   <ProductState>
+  <CustomerState>
 <Header/>
   <Routes>
       <Route path="/" element={<Home/>}>
@@ -52,10 +53,11 @@ function App() {
     <Route path="/login" element={<Login/>}></Route>
     <Route path="/customer/:id" element={<Invoice/>}></Route>
   </Routes>
+  </CustomerState>
   </ProductState>
   </CategoryState>
   </UserState>
-  </CustomerState>
+  
 </Router>
 </>
   );
