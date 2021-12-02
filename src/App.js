@@ -16,6 +16,7 @@ import ProductInfo from './components/pages/productinfo/ProductInfo';
 import Login from './components/pages/login/Login';
 import CustomerState from './components/contexts/customer/CustomerState';
 import Invoice from './components/pages/invoice/Invoice';
+import InvoiceState from './components/contexts/invoiceContext/InvoiceState';
 function App() {
   return (
 <>
@@ -25,6 +26,7 @@ function App() {
   <CategoryState>
   <ProductState>
   <CustomerState>
+    <InvoiceState>
 <Header/>
   <Routes>
       <Route path="/" element={<Home/>}>
@@ -53,6 +55,7 @@ function App() {
     <Route path="/login" element={<Login/>}></Route>
     <Route path="/customer/:id" element={<Invoice/>}></Route>
   </Routes>
+  </InvoiceState>
   </CustomerState>
   </ProductState>
   </CategoryState>
