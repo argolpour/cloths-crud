@@ -28,8 +28,10 @@ const ProductInfo = () => {
              <h2>{product.title}</h2>
              <h3>{product.category}</h3>
              <p>{product.description}</p>
-             <h4><strong>{product.price}</strong></h4>
-             { <span><i className="fas fa-star"></i>{product?.rating?.rate}</span>}
+             <div className={classes.rate}>
+             <h4><strong >Price:<span className="color-red">{product.price} $</span></strong></h4>
+             { <h4><strong>Rate:<i className="fas fa-star"></i>{product?.rating?.rate}</strong></h4>}
+             </div>
              <Link to={`/login?productid=${id}`} className="btn btn-primary btn-block">Buy</Link>
              <Link to="/" className="btn btn-success btn-block">Back</Link>
         </div>

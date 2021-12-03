@@ -64,6 +64,8 @@ const Login = () => {
             <label htmlFor="password">Password:</label>
             <input type="password" className="form-control" id="password" value={password} onChange={(e)=>(setPassword(e.target.value))}  onKeyUp={()=>{setError('')}}  placeholder="user name..."/>
             <button type="submit" className="btn btn-dark btn-block">Login</button>
+            <p className="d-flex justify-content-space"><strong>Admin: username:<span className="color-red"> admin</span></strong> <strong className="ml-auto">password:<span className="color-red">  123</span></strong></p>
+            <p className="d-flex justify-content-space"><strong>customer: username:<span className="color-yellow">  ss</span></strong> <strong className="ml-auto">password:<span className="color-yellow"> 123</span></strong></p>
             </form>
  
             </div>

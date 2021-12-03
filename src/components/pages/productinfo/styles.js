@@ -9,7 +9,7 @@ export const styles=createUseStyles({
         width:'100%',
         display:'flex',
         justifyContent:'space-around',
-        boxShadow:'0 0 7px 2px gray'
+        boxShadow:'0 0 7px 2px gray',
         
     },
     productImage:{
@@ -25,7 +25,14 @@ export const styles=createUseStyles({
     },
     productInfo:{
         width:'70%',
-        padding:10
+        padding:10,
+        display:"flex",
+        flexDirection:"column",
+       
+        '& i':{
+            color:'yellow',
+                    
+        }
     },
     recommendedWrapper:{
         width:'100%',
@@ -33,5 +40,9 @@ export const styles=createUseStyles({
         flexWrap:'wrap',
         justifyContent:'space-between',
         marginTop:30,boxShadow:'0 0 7px 2px gray'
+    },
+    rate:{
+        display:"flex", 
+        justifyContent:'space-around'
     }
 })
