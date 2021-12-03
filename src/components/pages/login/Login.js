@@ -31,10 +31,7 @@ const Login = () => {
         if(userName && password){
             if (isAdmin){
                 const admin=users.find(user=>user.username===userName && user.password===password)
-                console.log(users);
-                console.log(admin);
                 if (admin!==undefined){
-                    console.log("navigate");
                  navigate(`/admin`)
                 }else {
                   setError("username or password is wrong")
