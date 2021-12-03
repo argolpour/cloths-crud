@@ -9,6 +9,8 @@ const CreateUser = ({title,isEdit}) => {
          firstname:"",
          lastname:"",
          email:"",
+         username:"",
+         password:""
     })
     const onchangeHandler=(e)=>{
         setValues({...values,[e.target.name]:e.target.value})
@@ -63,6 +65,14 @@ useEffect(() => {
   <div className="form-group">
     <label htmlFor="email">Email</label>
     <input type="email" className="form-control" id="title" aria-describedby="emailHelp" placeholder="email" name="email" value={values.email} onChange={(e)=>{onchangeHandler(e)}}/> 
+  </div>
+  <div className="form-group">
+    <label htmlFor="username">User Name</label>
+    <input type="text" className="form-control" id="username" aria-describedby="emailHelp" placeholder="username" name="username" value={values.username} onChange={(e)=>{onchangeHandler(e)}}/> 
+  </div>
+  <div className="form-group">
+    <label htmlFor="password">User Name</label>
+    <input type="text" className="form-control" id="password" aria-describedby="emailHelp" placeholder="password" name="password" value={values.password} onChange={(e)=>{onchangeHandler(e)}}/> 
   </div>
    
  <div className="d-flex">

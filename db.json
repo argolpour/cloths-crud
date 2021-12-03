@@ -274,7 +274,7 @@
       "firstname": "alireza",
       "lastname": "golpour",
       "username": "admin",
-      "pasword": "admin123"
+      "password": "admin123"
     },
     {
       "id": 2,
@@ -282,7 +282,15 @@
       "firstname": "ahmad",
       "lastname": "bodaghi",
       "username": "ahmad",
-      "pasword": "ahmad123"
+      "password": "ahmad123"
+    },
+    {
+      "firstname": "mina",
+      "lastname": "sharifi",
+      "email": "mina@gmail.com",
+      "username": "minaadmin",
+      "password": "mina123",
+      "id": 3
     }
   ],
   "customers": [
@@ -373,6 +381,16 @@
       "totalamount": 223,
       "createdAt": "2021-12-03",
       "id": 3
+    },
+    {
+      "customerfullname": "saied kermani",
+      "customeraddress": "baharestan street first alley nimber 48",
+      "customertel": "09125400138",
+      "producttitle": "Mens Casual Premium Slim Fit T-Shirts ",
+      "productquantity": "2",
+      "totalamount": 45,
+      "createdAt": "2021-12-03",
+      "id": 4
     }
   ]
 }

@@ -1,4 +1,4 @@
-import {GET_INVOICES,DELETE_INVOICE} from './../Types';
+import {GET_INVOICES} from './../Types';
 const InvoiceReducer=(state,action)=>{
 
     switch (action.type) {

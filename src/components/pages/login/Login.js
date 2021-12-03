@@ -2,32 +2,52 @@ import {styles} from './styles'
 import loginImage from '../../../images/loginImage.jpg'
 import { useState, useContext, useEffect } from 'react';
 import CustomerContext from './../../contexts/customer/CutomerContext';
+import userContext from './../../contexts/userContext/UserContext';
 import { useNavigate ,useLocation} from 'react-router-dom';
+
 const Login = () => {
     const classes=styles()
     const navigate=useNavigate()
     const search=useLocation().search;
     const productId=new URLSearchParams(search).get('productid')
+    const isAdmin=new URLSearchParams(search).get('isAdmin')
+
 
     const [userName, setUserName] = useState()
     const [password, setPassword] = useState()
     const [error, setError] = useState("")
     const {getCustomers,customers}=useContext(CustomerContext)
+    const {getUsers,users}=useContext(userContext)
+
 
       useEffect(() => {
       getCustomers()
+      getUsers()
       // eslint-disable-next-line 
     }, [])
 
     const loginHandler=(e)=>{
-       
+             
         if(userName && password){
-            const customer=customers.find(customer=>customer.username===userName && customer.password===password)
+            if (isAdmin){
+                const admin=users.find(user=>user.username===userName && user.password===password)
+                console.log(users);
+                console.log(admin);
+                if (admin!==undefined){
+                    console.log("navigate");
+                 navigate(`/admin`)
+                }else {
+                  setError("username or password is wrong")
+                }     
+            }else {
+                const customer=customers.find(customer=>customer.username===userName && customer.password===password)
             if (customer!==undefined){
              navigate(`/customer/${customer.id}?name=${customer.firstname}_${customer.lastname}&productid=${productId}`)
             }else {
               setError("username or password is wrong")
+            } 
             }
+           
         }
         e.preventDefault()
       
