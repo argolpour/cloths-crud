@@ -26,7 +26,7 @@ const Invoice = () => {
         customertel:"",
         producttitle:"",
         productquantity:0,
-        totlalamount:0,
+        totalamount:0,
         createdAt:moment(date).format('YYYY-MM-DD')
     })
     useEffect(() => {
@@ -39,7 +39,7 @@ const Invoice = () => {
             customertel:customer.tel,
             producttitle:product.title,
             productquantity:quantity,
-            totlalamount:Math.ceil(quantity*product.price) ,
+            totalamount:Math.ceil(quantity*product.price) ,
             createdAt:moment(date).format('YYYY-MM-DD')
         })
       
@@ -54,7 +54,7 @@ const Invoice = () => {
             customertel:customer.tel,
             producttitle:product.title,
             productquantity:quantity,
-            totlalamount:Math.ceil(quantity*product.price) ,
+            totalamount:Math.ceil(quantity*product.price) ,
             createdAt:moment(date).format('YYYY-MM-DD')
         })
     }, [quantity])

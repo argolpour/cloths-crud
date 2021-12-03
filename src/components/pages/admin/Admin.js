@@ -10,6 +10,8 @@ const Admin = () => {
             <Link to="/admin/product"><button className="btn btn-primary btn-block">Product  Dashbord</button></Link>
             <Link to="/admin/category"><button className="btn btn-primary btn-block">Category  Dashbord</button></Link>
             <Link to="/admin/user"> <button className="btn btn-primary btn-block">Users  Dashbord</button></Link>
+            <Link to="/admin/invoice"> <button className="btn btn-primary btn-block">Invoice  Dashbord</button></Link>
+
         </div>
     )
 }

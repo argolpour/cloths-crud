@@ -346,9 +346,9 @@
   "invoices": [
     {
       "id": 1,
-      "Customerfullname": "saied kermani",
-      "Customeraddress": "baharestan street first alley nimber 48",
-      "Customertel": "09125400138",
+      "customerfullname": "saied kermani",
+      "customeraddress": "baharestan street first alley nimber 48",
+      "customertel": "09125400138",
       "producttitle": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
       "productquantity": 2,
       "totalamount": 218,
@@ -360,7 +360,7 @@
       "customertel": "09125400138",
       "producttitle": "Mens Casual Slim Fit",
       "productquantity": "3",
-      "totlalamount": 48,
+      "totalamount": 48,
       "createdAt": "2021-12-02",
       "id": 2
     },
@@ -370,9 +370,39 @@
       "customertel": "09125400138",
       "producttitle": "Solid Gold Petite Micropave ",
       "productquantity": "2",
-      "totlalamount": 336,
+      "totalamount": 336,
       "createdAt": "2021-12-02",
       "id": 3
+    },
+    {
+      "customerfullname": "saied kermani",
+      "customeraddress": "baharestan street first alley nimber 48",
+      "customertel": "09125400138",
+      "producttitle": "Opna Women's Short Sleeve Moisture",
+      "productquantity": "3",
+      "totalamount": 24,
+      "createdAt": "2021-12-03",
+      "id": 4
+    },
+    {
+      "customerfullname": "saied kermani",
+      "customeraddress": "baharestan street first alley nimber 48",
+      "customertel": "09125400138",
+      "producttitle": "Mens Casual Slim Fit",
+      "productquantity": "3",
+      "totalamount": 48,
+      "createdAt": "2021-12-03",
+      "id": 5
+    },
+    {
+      "customerfullname": "saied kermani",
+      "customeraddress": "baharestan street first alley nimber 48",
+      "customertel": "09125400138",
+      "producttitle": "Gold Jersey Sequin Wrap Dress",
+      "productquantity": "2",
+      "totalamount": 140,
+      "createdAt": "2021-12-03",
+      "id": 6
     }
   ]
 }

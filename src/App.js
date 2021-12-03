@@ -17,6 +17,7 @@ import Login from './components/pages/login/Login';
 import CustomerState from './components/contexts/customer/CustomerState';
 import Invoice from './components/pages/invoice/Invoice';
 import InvoiceState from './components/contexts/invoiceContext/InvoiceState';
+import InvoiceDB from './components/pages/admin/invoice/InvoiceDB';
 function App() {
   return (
 <>
@@ -54,6 +55,8 @@ function App() {
     </Route>
     <Route path="/login" element={<Login/>}></Route>
     <Route path="/customer/:id" element={<Invoice/>}></Route>
+    <Route path="/admin/invoice" element={<InvoiceDB/>}></Route>
+
   </Routes>
   </InvoiceState>
   </CustomerState>
