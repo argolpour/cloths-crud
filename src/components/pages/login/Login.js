@@ -40,9 +40,9 @@ const Login = () => {
                 {error && <li className={classes.error}>{error}</li>}
             <form className="form-group" onSubmit={(e)=>{loginHandler(e)}}>
             <label htmlFor="username">User Name:</label>
-            <input type="text" className="form-control" id="username" autoComplete="off" value={userName} onChange={(e)=>(setUserName(e.target.value))} onKeyUp={()=>{setError('')}}/>
+            <input type="text" className="form-control" id="username" autoComplete="off" value={userName} onChange={(e)=>(setUserName(e.target.value))} onKeyUp={()=>{setError('')}} placeholder="user name..."/>
             <label htmlFor="password">Password:</label>
-            <input type="password" className="form-control" id="password" value={password} onChange={(e)=>(setPassword(e.target.value))}  onKeyUp={()=>{setError('')}}/>
+            <input type="password" className="form-control" id="password" value={password} onChange={(e)=>(setPassword(e.target.value))}  onKeyUp={()=>{setError('')}}  placeholder="user name..."/>
             <button type="submit" className="btn btn-dark btn-block">Login</button>
             </form>
  

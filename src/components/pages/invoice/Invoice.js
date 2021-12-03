@@ -19,7 +19,6 @@ const Invoice = () => {
     const productid=new URLSearchParams(search).get('productid')
     const classes=styles()
     const date=new Date(Date.now())
-    const [cost, setCost] = useState(product.price)
     const [values, setValues] = useState({
         customerfullname:``,
         customeraddress:"",
@@ -33,7 +32,7 @@ const Invoice = () => {
        getCustomer(id)
        getProduct(productid)
       
-        setValues({
+        setValues({...values,
             customerfullname:`${customer.firstname} ${customer.lastname}`,
             customeraddress:customer?.address?.address,
             customertel:customer.tel,
@@ -58,11 +57,7 @@ const Invoice = () => {
             createdAt:moment(date).format('YYYY-MM-DD')
         })
     }, [quantity])
-    const onchangeHandler=(e)=>{
-  
-       
-    }
-       const submitHandler=()=>{
+           const submitHandler=()=>{
            console.log(quantity);
         if (+quantity===0){
             alert("please set the quantity")
@@ -71,11 +66,10 @@ const Invoice = () => {
            createInvoice(values)
         navigate("/")
         }
-           
-      
-
     }
-  
+    const dismisshandler=()=>{
+        navigate("/")
+    }
     return (
         <div className={classes.invoiceWrapper}>
             <div className={classes.invoiceInfo}>
@@ -91,13 +85,14 @@ const Invoice = () => {
             </div> 
           <div className={classes.productInfo}>
               <div className={classes.productImage}>
-                  <img src={product.image}/>
+                  <img src={product.image} alt={product.title}/>
               </div>
               <div className={classes.product}>
                   <h4>{product.title}</h4>
                  Quantity: <input className="form-control" type="number"  value={quantity} onChange={e=>{setQuantity(e.target.value)}}/>
                  <p>Invoice Total Mount: <strong>{Math.ceil(quantity*product.price) } $</strong></p>
                  <button className="btn btn-primary btn-block" onClick={submitHandler}>Save</button>
+                 <button className="btn btn-success btn-block" onClick={dismisshandler}>Cancel</button>
               </div>
           </div>
 
